@@ -77,6 +77,20 @@ tsv = urllib2.urlopen(url)
 for line in csv.reader(tsv, delimiter="\t"): 
   print line
 </code></pre>
+
+<h4>
+<a id="php" class="anchor" href="#php" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP</h4>
+
+<pre><code>&lt;?php
+$data = file_get_contents('https://raw.githubusercontent.com/stoicmaxims/stoicmaxims.github.io/master/list.tsv');
+$lines = explode("\n",$data);
+foreach($lines as $maxim){
+  if(!empty($maxim)){
+    $data_item = explode("\t",$maxim);
+    print_r($data_item);
+  }
+}
+</code></pre>
       </section>
 
       <footer>
