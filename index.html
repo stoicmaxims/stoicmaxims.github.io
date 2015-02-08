@@ -52,13 +52,15 @@
 Lets keep them as maxims, ie. short memorable snippets, distilled and bite sized.
 If you wish to add to it, submit a pull request, or send submissions in the below format to <strong><a href="mailto:stoicmaxims@outlook.com">stoicmaxims@outlook.com</a></strong> and I'll do my best to get them added.</p>
 
+<p>Currently they are in a <a href="https://support.google.com/docs/answer/63377?hl=en">tab delimited format</a> for simplicity</p>
+
 <p><strong>format 1 per line</strong>:
-Maxim[tab]Whom</p>
+ID  Maxim  Whom</p>
 
 <ul>
-<li><a href="https://github.com/stoicmaxims/stoicmaxims.github.io/blob/master/list.tsv">Pretty List</a></li>
-<li><a href="https://raw.githubusercontent.com/stoicmaxims/stoicmaxims.github.io/master/list.tsv">Raw List</a></li>
-<li><a href="https://stoicmaxims.github.io/list.tsv">Download</a></li>
+<li><a href="https://github.com/stoicmaxims/stoicmaxims.github.io/blob/master/list.tsv.txt">Pretty List</a></li>
+<li><a href="https://raw.githubusercontent.com/stoicmaxims/stoicmaxims.github.io/master/list.tsv.txt">Raw List</a></li>
+<li><a href="https://stoicmaxims.github.io/list.tsv.txt">Download</a></li>
 </ul>
 
 <h3>
@@ -70,7 +72,7 @@ Maxim[tab]Whom</p>
 <a id="python" class="anchor" href="#python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python</h4>
 
 <pre><code>import csv, urllib2
-url = "https://raw.githubusercontent.com/stoicmaxims/stoicmaxims.github.io/master/list.tsv"
+url = "https://raw.githubusercontent.com/stoicmaxims/stoicmaxims.github.io/master/list.tsv.txt"
 response = urllib2.urlopen(url)
 for line in csv.reader(tsv, delimiter="\t"): 
   print line
