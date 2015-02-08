@@ -73,7 +73,7 @@ ID  Maxim  Whom</p>
 
 <pre><code>import csv, urllib2
 url = "https://raw.githubusercontent.com/stoicmaxims/stoicmaxims.github.io/master/list.tsv.txt"
-response = urllib2.urlopen(url)
+tsv = urllib2.urlopen(url)
 for line in csv.reader(tsv, delimiter="\t"): 
   print line
 </code></pre>
