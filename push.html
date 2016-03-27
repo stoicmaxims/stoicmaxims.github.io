@@ -20,14 +20,13 @@
 
         function notifyUser() {
           var title = 'This is a test';
-          var body = 'Have a great day!'
+          var body = 'Have a great day!';
           var options;
 
 
           Notification.requestPermission(function() {
             var notification = new Notification(title, {body:body} );
-            
-        })
+        });
         
         notifyUser();
         
