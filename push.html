@@ -1,9 +1,37 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Push API Demo</title>
 
-<body>
+  </head>
+  <body>
+    <h1>Web Notifications API</h1>
+    
 
-<h1>test</h1>
+  
+    <script>
+      if (!('Notification' in window)) {
+        console.log('notifications not supported');
+      } else {
+        var log = document.getElementById('log');
+        var notificationEvents = ['onclick', 'onshow', 'onerror', 'onclose'];
 
-</body>
+        function notifyUser() {
+          var title = 'This is a test';
+          var body = 'Have a great day!'
+          var options;
 
+
+          Notification.requestPermission(function() {
+            var notification = new Notification(title, {body:body} );
+            
+         notifyUser()
+        }
+        
+
+      }
+    </script>
+  </body>
 </html>
