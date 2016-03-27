@@ -12,31 +12,26 @@
 
   
     <script>
+    
+    function notifyUser() {
       if (!('Notification' in window)) {
         console.log('notifications not supported');
       } else {
         var log = document.getElementById('log');
         var notificationEvents = ['onclick', 'onshow', 'onerror', 'onclose'];
 
-        function notifyUser() {
+        
           var title = 'This is a test';
-          var body = 'Have a great day!';
+          var body = 'Have a great day!'
           var options;
 
 
           Notification.requestPermission(function() {
             var notification = new Notification(title, {body:body} );
-            notifyUser();
-            
-        });
-        
-        
+      }
       }
       
-      
-      
-      }
-      
+      notifyUser();
     </script>
   </body>
 </html>
